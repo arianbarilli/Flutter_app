@@ -1,20 +1,26 @@
+// lib/main.dart
+
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/data/repositories/repository.dart';
-import 'package:flutter_application_1/data/services/api/api_client.dart';
-import 'package:flutter_application_1/router.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
+import 'viewmodels/weather_viewmodel.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  initializeDateFormatting("pt_BR").then(
-    (value) => runApp(
-      MultiProvider(
-        providers: [
-          Provider(create: (context) => APIClient()),
-          Provider(create: (context) => Repository(client: context.read())),
-        ],
-        child: MaterialApp.router(routerConfig: router()),
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => WeatherViewModel())],
+      child: MaterialApp(
+        title: 'Clima App',
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: const HomeScreen(),
       ),
-    ),
-  );
+    );
+  }
 }
