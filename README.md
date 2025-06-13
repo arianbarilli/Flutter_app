@@ -1,3 +1,6 @@
-# app_tempo
+# Aplicativo do Clima
 
-A new Flutter project.
+Integrantes do grupo:
+Arian Barilli
+João Pedro
+Luiz Henrique
