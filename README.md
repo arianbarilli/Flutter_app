@@ -1,3 +1,3 @@
 # app_tempo
 
-A new Flutter project.
+Trabalho de Arian Barilli, João Pedro Voginski Gonçalves e Luiz Henrique
