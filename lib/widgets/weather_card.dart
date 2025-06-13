@@ -11,7 +11,7 @@ weather_model.dart: importa a classe Weather, que contém os dados que
 serão exibidos no card.
 */
 import 'package:flutter/material.dart';
-import '../models/weather_model.dart';
+import 'package:app_tempo/models/weather_model.dart';
 
 /*
 WeatherCard: é um widget do tipo StatelessWidget, ou seja, ele não muda seu
